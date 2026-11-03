@@ -1,7 +1,7 @@
 # Health-Insurance-claim-fraud-analysis
 
 
-A rule-based system that ranks 8,000 Indian health insurance claims by suspicion level, so an investigation team can review the riskiest claims first. Built with **Python (pandas)** and **Power BI**. No machine learning.
+A rule-based system that ranks 8,000 Indian health insurance claims by suspicion level, so an investigation team can review the riskiest claims first. Built with **Python (pandas)** and **Power BI**.
 
 ---
 
