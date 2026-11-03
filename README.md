@@ -7,7 +7,7 @@ A rule-based system that ranks 8,000 Indian health insurance claims by suspicion
 
 ## 1. Business problem
 
-Special Investigation Units (SIUs) can manually review only a small share of claims, and there is usually no systematic way to choose which ones. This project builds an explainable scoring system that answers:
+Insurers lose money when claims are paid above what the bill justifies or beyond policy limits. This project audits 8,000 health insurance claims to find where payouts exceed their own components, quantifies the leakage, and identifies which claims to recover or correct first. This project builds an explainable scoring system that answers:
 
 > **Which claims should an investigator look at first, and why?**
 
@@ -112,33 +112,8 @@ Screenshots: `powerbi/screenshots/` (add `01_executive_summary.png`, `02_flag_an
 - **No premium or claim-status columns**, so loss ratio and rejection analysis were not possible.
 - **No manual review** of top-ranked claims was done as part of this project.
 
-## 9. Repository structure
-
-```
-.
-├── data/
-│   ├── raw/                 # original CSV (never edited)
-│   └── clean/
-│       └── claims_scored.csv   # cleaned data with flags, score, tier, reasons
-├── notebooks/
-│   └── Healthcare_analysis.ipynb
-├── powerbi/
-│   ├── claims_fraud_dashboard.pbix
-│   └── screenshots/
-└── README.md
-```
-
-## 10. How to reproduce
-
-1. Download the dataset from Kaggle and place it in `data/raw/`.
-2. Install dependencies: `pip install pandas numpy matplotlib seaborn jupyter`
-3. Run `notebooks/Healthcare_analysis.ipynb` top to bottom (**Kernel > Restart & Run All**). It writes `data/clean/claims_scored.csv`.
-4. Open `powerbi/claims_fraud_dashboard.pbix` and refresh the data source to the CSV path on your machine.
-
-## 11. Tools
+## 9. Tools
 
 Python (pandas, numpy, matplotlib, seaborn) · Power BI (DAX measures, conditional formatting, slicers) · Jupyter
 
----
 
-*Author: [Your Name] · [LinkedIn] · [GitHub]*
